@@ -1,0 +1,12 @@
+{
+  "name": "connextus-market-data",
+  "version": "1.0.0",
+  "main": "scrape-pun.js",
+  "scripts": {
+    "start": "node scrape-pun.js"
+  },
+  "dependencies": {
+    "basic-ftp": "^5.0.5",
+    "puppeteer": "^24.7.1"
+  }
+}

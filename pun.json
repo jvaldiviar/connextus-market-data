@@ -1,0 +1,107 @@
+{
+  "source": "Convergenze",
+  "sourceUrl": "https://convergenze.it/it/servizi/energia/pun-orario",
+  "market": "PUN",
+  "unit": "€/MWh",
+  "date": "21/05/2026",
+  "averagePun": 115.37,
+  "hourlyPrices": [
+    {
+      "hour": 1,
+      "price": 138.04
+    },
+    {
+      "hour": 2,
+      "price": 132.27
+    },
+    {
+      "hour": 3,
+      "price": 131.19
+    },
+    {
+      "hour": 4,
+      "price": 133.98
+    },
+    {
+      "hour": 5,
+      "price": 133.98
+    },
+    {
+      "hour": 6,
+      "price": 136.59
+    },
+    {
+      "hour": 7,
+      "price": 153.21
+    },
+    {
+      "hour": 8,
+      "price": 150
+    },
+    {
+      "hour": 9,
+      "price": 122.269
+    },
+    {
+      "hour": 10,
+      "price": 106.866
+    },
+    {
+      "hour": 11,
+      "price": 93.185
+    },
+    {
+      "hour": 12,
+      "price": 72.43
+    },
+    {
+      "hour": 13,
+      "price": 10.107
+    },
+    {
+      "hour": 14,
+      "price": 13.142
+    },
+    {
+      "hour": 15,
+      "price": 37.635
+    },
+    {
+      "hour": 16,
+      "price": 58.191
+    },
+    {
+      "hour": 17,
+      "price": 86.979
+    },
+    {
+      "hour": 18,
+      "price": 89.342
+    },
+    {
+      "hour": 19,
+      "price": 139.928
+    },
+    {
+      "hour": 20,
+      "price": 162.496
+    },
+    {
+      "hour": 21,
+      "price": 180.15
+    },
+    {
+      "hour": 22,
+      "price": 171.42
+    },
+    {
+      "hour": 23,
+      "price": 162.422
+    },
+    {
+      "hour": 24,
+      "price": 153.067
+    }
+  ],
+  "updatedAt": "2026-05-20T13:37:50.788Z"
+}
