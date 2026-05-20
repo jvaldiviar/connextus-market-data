@@ -3,11 +3,7 @@ const fs = require('fs');
 
 async function scrapePUN() {
   const browser = await puppeteer.launch({
-    headless: true,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-    ],
+    headless: 'new',
   });
 
   const page = await browser.newPage();
