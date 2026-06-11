@@ -3,16 +3,16 @@
   "sourceUrl": "https://convergenze.it/it/servizi/energia/pun-orario",
   "market": "PUN",
   "unit": "€/MWh",
-  "date": "11/06/2026",
-  "averagePun": 127.23,
+  "date": "12/06/2026",
+  "averagePun": 113.43,
   "hourlyPrices": [
     {
       "hour": 1,
-      "price": 132.305
+      "price": 141.15
     },
     {
       "hour": 2,
-      "price": 131.415
+      "price": 131.795
     },
     {
       "hour": 3,
@@ -24,84 +24,84 @@
     },
     {
       "hour": 5,
-      "price": 130.94
+      "price": 130.1
     },
     {
       "hour": 6,
-      "price": 132.773
+      "price": 130.798
     },
     {
       "hour": 7,
-      "price": 157.025
+      "price": 138.494
     },
     {
       "hour": 8,
-      "price": 158.894
+      "price": 140
     },
     {
       "hour": 9,
-      "price": 156.069
+      "price": 128.6
     },
     {
       "hour": 10,
-      "price": 135.11
+      "price": 101.695
     },
     {
       "hour": 11,
-      "price": 125.754
+      "price": 87.392
     },
     {
       "hour": 12,
-      "price": 112.837
+      "price": 85.665
     },
     {
       "hour": 13,
-      "price": 74.049
+      "price": 61.211
     },
     {
       "hour": 14,
-      "price": 61.523
+      "price": 53.587
     },
     {
       "hour": 15,
-      "price": 63.029
+      "price": 50.841
     },
     {
       "hour": 16,
-      "price": 78.354
+      "price": 42.73
     },
     {
       "hour": 17,
-      "price": 108.532
+      "price": 52.78
     },
     {
       "hour": 18,
-      "price": 118.192
+      "price": 84.82
     },
     {
       "hour": 19,
-      "price": 136.824
+      "price": 126.107
     },
     {
       "hour": 20,
-      "price": 163.015
+      "price": 147.22
     },
     {
       "hour": 21,
-      "price": 169.359
+      "price": 162.383
     },
     {
       "hour": 22,
-      "price": 163.183
+      "price": 162.025
     },
     {
       "hour": 23,
-      "price": 148.813
+      "price": 159.188
     },
     {
       "hour": 24,
-      "price": 135.403
+      "price": 143.558
     }
   ],
-  "updatedAt": "2026-06-10T16:36:12.665Z"
+  "updatedAt": "2026-06-11T16:56:15.543Z"
 }
