@@ -3,28 +3,28 @@
   "sourceUrl": "https://convergenze.it/it/servizi/energia/pun-orario",
   "market": "PUN",
   "unit": "€/MWh",
-  "date": "14/06/2026",
-  "averagePun": 91.15,
+  "date": "15/06/2026",
+  "averagePun": 130.02,
   "hourlyPrices": [
     {
       "hour": 1,
-      "price": 145.975
+      "price": 125.77
     },
     {
       "hour": 2,
-      "price": 141.551
+      "price": 118.31
     },
     {
       "hour": 3,
-      "price": 129.9
+      "price": 117.63
     },
     {
       "hour": 4,
-      "price": 123.663
+      "price": 122.11
     },
     {
       "hour": 5,
-      "price": 122.765
+      "price": 122.513
     },
     {
       "hour": 6,
@@ -32,76 +32,76 @@
     },
     {
       "hour": 7,
-      "price": 130.1
+      "price": 144.853
     },
     {
       "hour": 8,
-      "price": 130.1
+      "price": 150.965
     },
     {
       "hour": 9,
-      "price": 121
+      "price": 152.602
     },
     {
       "hour": 10,
-      "price": 98.023
+      "price": 146.54
     },
     {
       "hour": 11,
-      "price": 34.864
+      "price": 122.989
     },
     {
       "hour": 12,
-      "price": 9.799
+      "price": 96.378
     },
     {
       "hour": 13,
-      "price": 7.092
+      "price": 62.625
     },
     {
       "hour": 14,
-      "price": 4.998
+      "price": 81.346
     },
     {
       "hour": 15,
-      "price": 3.09
+      "price": 111.814
     },
     {
       "hour": 16,
-      "price": 2.13
+      "price": 119.549
     },
     {
       "hour": 17,
-      "price": 0.244
+      "price": 134.102
     },
     {
       "hour": 18,
-      "price": 38.733
+      "price": 140
     },
     {
       "hour": 19,
-      "price": 108.125
+      "price": 145.36
     },
     {
       "hour": 20,
-      "price": 146.083
+      "price": 158.108
     },
     {
       "hour": 21,
-      "price": 146.778
+      "price": 164.292
     },
     {
       "hour": 22,
-      "price": 144.873
+      "price": 159.626
     },
     {
       "hour": 23,
-      "price": 137.955
+      "price": 154.596
     },
     {
       "hour": 24,
-      "price": 134.81
+      "price": 143.324
     }
   ],
-  "updatedAt": "2026-06-13T15:02:02.777Z"
+  "updatedAt": "2026-06-14T15:08:06.208Z"
 }
