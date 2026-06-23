@@ -26,6 +26,7 @@ jobs:
           SGR_USERNAME: ${{ secrets.SGR_USERNAME }}
           SGR_PASSWORD: ${{ secrets.SGR_PASSWORD }}
           SGR_BASE_URL: ${{ secrets.SGR_BASE_URL }}
+        run: node scrape-pun.js
       
       - name: Commit updated JSON
         run: |
