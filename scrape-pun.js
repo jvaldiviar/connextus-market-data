@@ -10,10 +10,13 @@ const PASSWORD = process.env.SGR_PASSWORD;
 
 const parser = new XMLParser({ ignoreAttributes: false });
 
-function getYesterdayDate() {
-  const date = new Date();
-  date.setDate(date.getDate() - 1);
-  return date.toISOString().slice(0, 10);
+function getTodayDate() {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Rome',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(new Date());
 }
 
 async function request(url, options = {}) {
@@ -113,7 +116,7 @@ async function main() {
     throw new Error('Missing SGR_USERNAME or SGR_PASSWORD');
   }
 
-  const date = process.env.PUN_DATE || getYesterdayDate();
+  const date = process.env.PUN_DATE || getTodayDate();
 
   const sessionId = await createSession();
   await login(sessionId);
