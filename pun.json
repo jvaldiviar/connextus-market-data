@@ -1,255 +1,255 @@
 {
-  "date": "2026-06-28",
+  "date": "2026-06-29",
   "source": "SGR",
   "market": "PUN",
   "unit": "EUR/MWh",
-  "valueMono": 121.367419,
-  "min": 59.75,
-  "max": 159.0125,
+  "valueMono": 156.64546,
+  "min": 130.435,
+  "max": 206.2,
   "hours": [
     {
       "hour": 1,
-      "value": 139.494608,
+      "value": 155.7575,
       "frameCode": "F3",
       "frameCodeBio": "F23"
     },
     {
       "hour": 2,
-      "value": 133.493553,
+      "value": 145.34,
       "frameCode": "F3",
       "frameCodeBio": "F23"
     },
     {
       "hour": 3,
-      "value": 130.745,
+      "value": 138.655,
       "frameCode": "F3",
       "frameCodeBio": "F23"
     },
     {
       "hour": 4,
-      "value": 131.695,
+      "value": 136.1325,
       "frameCode": "F3",
       "frameCodeBio": "F23"
     },
     {
       "hour": 5,
-      "value": 130.1,
+      "value": 130.435,
       "frameCode": "F3",
       "frameCodeBio": "F23"
     },
     {
       "hour": 6,
-      "value": 124.2825,
+      "value": 133.304918,
       "frameCode": "F3",
       "frameCodeBio": "F23"
     },
     {
       "hour": 7,
-      "value": 126.4375,
+      "value": 143.620558,
       "frameCode": "F3",
       "frameCodeBio": "F23"
     },
     {
       "hour": 8,
-      "value": 130.1,
-      "frameCode": "F3",
+      "value": 151.92084,
+      "frameCode": "F2",
       "frameCodeBio": "F23"
     },
     {
       "hour": 9,
-      "value": 128.675,
-      "frameCode": "F3",
-      "frameCodeBio": "F23"
+      "value": 149.267873,
+      "frameCode": "F1",
+      "frameCodeBio": "F1"
     },
     {
       "hour": 10,
-      "value": 115,
-      "frameCode": "F3",
-      "frameCodeBio": "F23"
+      "value": 136.915,
+      "frameCode": "F1",
+      "frameCodeBio": "F1"
     },
     {
       "hour": 11,
-      "value": 65.6025,
-      "frameCode": "F3",
-      "frameCodeBio": "F23"
+      "value": 132.92,
+      "frameCode": "F1",
+      "frameCodeBio": "F1"
     },
     {
       "hour": 12,
-      "value": 59.75,
-      "frameCode": "F3",
-      "frameCodeBio": "F23"
+      "value": 135.44,
+      "frameCode": "F1",
+      "frameCodeBio": "F1"
     },
     {
       "hour": 13,
-      "value": 92.4925,
-      "frameCode": "F3",
-      "frameCodeBio": "F23"
+      "value": 134.165,
+      "frameCode": "F1",
+      "frameCodeBio": "F1"
     },
     {
       "hour": 14,
-      "value": 90.23,
-      "frameCode": "F3",
-      "frameCodeBio": "F23"
+      "value": 136.5225,
+      "frameCode": "F1",
+      "frameCodeBio": "F1"
     },
     {
       "hour": 15,
-      "value": 86.1175,
-      "frameCode": "F3",
-      "frameCodeBio": "F23"
+      "value": 143.091943,
+      "frameCode": "F1",
+      "frameCodeBio": "F1"
     },
     {
       "hour": 16,
-      "value": 69.0975,
-      "frameCode": "F3",
-      "frameCodeBio": "F23"
+      "value": 164.909558,
+      "frameCode": "F1",
+      "frameCodeBio": "F1"
     },
     {
       "hour": 17,
-      "value": 122.68,
-      "frameCode": "F3",
-      "frameCodeBio": "F23"
+      "value": 161.46,
+      "frameCode": "F1",
+      "frameCodeBio": "F1"
     },
     {
       "hour": 18,
-      "value": 129.805,
-      "frameCode": "F3",
-      "frameCodeBio": "F23"
+      "value": 172.5775,
+      "frameCode": "F1",
+      "frameCodeBio": "F1"
     },
     {
       "hour": 19,
-      "value": 133.705,
-      "frameCode": "F3",
-      "frameCodeBio": "F23"
+      "value": 180.75035,
+      "frameCode": "F1",
+      "frameCodeBio": "F1"
     },
     {
       "hour": 20,
-      "value": 159.0125,
-      "frameCode": "F3",
+      "value": 206.2,
+      "frameCode": "F2",
       "frameCodeBio": "F23"
     },
     {
       "hour": 21,
-      "value": 156.205368,
-      "frameCode": "F3",
+      "value": 205.97,
+      "frameCode": "F2",
       "frameCodeBio": "F23"
     },
     {
       "hour": 22,
-      "value": 158.8025,
-      "frameCode": "F3",
+      "value": 190.5475,
+      "frameCode": "F2",
       "frameCodeBio": "F23"
     },
     {
       "hour": 23,
-      "value": 155.93208,
-      "frameCode": "F3",
+      "value": 200.7375,
+      "frameCode": "F2",
       "frameCodeBio": "F23"
     },
     {
       "hour": 24,
-      "value": 143.36245,
+      "value": 172.85,
       "frameCode": "F3",
       "frameCodeBio": "F23"
     }
   ],
-  "averagePun": 121.367419,
+  "averagePun": 156.64546,
   "hourlyPrices": [
     {
       "hour": 1,
-      "price": 139.494608
+      "price": 155.7575
     },
     {
       "hour": 2,
-      "price": 133.493553
+      "price": 145.34
     },
     {
       "hour": 3,
-      "price": 130.745
+      "price": 138.655
     },
     {
       "hour": 4,
-      "price": 131.695
+      "price": 136.1325
     },
     {
       "hour": 5,
-      "price": 130.1
+      "price": 130.435
     },
     {
       "hour": 6,
-      "price": 124.2825
+      "price": 133.304918
     },
     {
       "hour": 7,
-      "price": 126.4375
+      "price": 143.620558
     },
     {
       "hour": 8,
-      "price": 130.1
+      "price": 151.92084
     },
     {
       "hour": 9,
-      "price": 128.675
+      "price": 149.267873
     },
     {
       "hour": 10,
-      "price": 115
+      "price": 136.915
     },
     {
       "hour": 11,
-      "price": 65.6025
+      "price": 132.92
     },
     {
       "hour": 12,
-      "price": 59.75
+      "price": 135.44
     },
     {
       "hour": 13,
-      "price": 92.4925
+      "price": 134.165
     },
     {
       "hour": 14,
-      "price": 90.23
+      "price": 136.5225
     },
     {
       "hour": 15,
-      "price": 86.1175
+      "price": 143.091943
     },
     {
       "hour": 16,
-      "price": 69.0975
+      "price": 164.909558
     },
     {
       "hour": 17,
-      "price": 122.68
+      "price": 161.46
     },
     {
       "hour": 18,
-      "price": 129.805
+      "price": 172.5775
     },
     {
       "hour": 19,
-      "price": 133.705
+      "price": 180.75035
     },
     {
       "hour": 20,
-      "price": 159.0125
+      "price": 206.2
     },
     {
       "hour": 21,
-      "price": 156.205368
+      "price": 205.97
     },
     {
       "hour": 22,
-      "price": 158.8025
+      "price": 190.5475
     },
     {
       "hour": 23,
-      "price": 155.93208
+      "price": 200.7375
     },
     {
       "hour": 24,
-      "price": 143.36245
+      "price": 172.85
     }
   ],
-  "updatedAt": "2026-06-28T07:02:57.892Z"
+  "updatedAt": "2026-06-29T08:13:06.567Z"
 }
