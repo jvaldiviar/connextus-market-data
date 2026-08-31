@@ -7,6 +7,9 @@ const BASE_URL =
 
 const USERNAME = process.env.SGR_USERNAME;
 const PASSWORD = process.env.SGR_PASSWORD;
+const OUTPUT_FILE = 'pun.json';
+const MAX_ATTEMPTS = 4; // Initial attempt plus three retries.
+const RETRY_DELAYS_MS = [15_000, 30_000, 60_000];
 
 const parser = new XMLParser({ ignoreAttributes: false });
 
@@ -20,7 +23,10 @@ function getTodayDate() {
 }
 
 async function request(url, options = {}) {
-  const response = await fetch(url, options);
+  const response = await fetch(url, {
+    ...options,
+    signal: options.signal || AbortSignal.timeout(30_000),
+  });
   const text = await response.text();
 
   if (!response.ok) {
@@ -106,9 +112,105 @@ async function fetchPun(date, sessionId) {
       hour: h.hour,
       price: h.value,
     })),
+  };
+}
 
+function validatePunData(punData, expectedDate) {
+  if (punData.date !== expectedDate) {
+    throw new Error(
+      `Unexpected PUN date: expected ${expectedDate}, received ${punData.date}`,
+    );
+  }
+
+  if (![23, 24, 25].includes(punData.hours.length)) {
+    throw new Error(
+      `Unexpected number of hourly prices: ${punData.hours.length}`,
+    );
+  }
+
+  const prices = [
+    punData.valueMono,
+    punData.min,
+    punData.max,
+    punData.averagePun,
+    ...punData.hours.flatMap(({ hour, value }) => [hour, value]),
+    ...punData.hourlyPrices.flatMap(({ hour, price }) => [hour, price]),
+  ];
+
+  if (!prices.every(Number.isFinite)) {
+    throw new Error('PUN response contains a missing or invalid numeric value');
+  }
+}
+
+function comparablePunData(punData) {
+  const { updatedAt: _updatedAt, ...data } = punData;
+  return data;
+}
+
+function hasChanged(punData) {
+  if (!fs.existsSync(OUTPUT_FILE)) {
+    return true;
+  }
+
+  try {
+    const currentData = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
+    return (
+      JSON.stringify(comparablePunData(currentData)) !==
+      JSON.stringify(comparablePunData(punData))
+    );
+  } catch (error) {
+    console.warn(`Existing ${OUTPUT_FILE} could not be read: ${error.message}`);
+    return true;
+  }
+}
+
+function writePunData(punData) {
+  const temporaryFile = `${OUTPUT_FILE}.tmp`;
+  const dataWithTimestamp = {
+    ...punData,
     updatedAt: new Date().toISOString(),
   };
+
+  fs.writeFileSync(temporaryFile, JSON.stringify(dataWithTimestamp, null, 2));
+  fs.renameSync(temporaryFile, OUTPUT_FILE);
+}
+
+function sleep(milliseconds) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
+
+async function fetchAndValidatePun(date) {
+  const sessionId = await createSession();
+  await login(sessionId);
+
+  const punData = await fetchPun(date, sessionId);
+  validatePunData(punData, date);
+  return punData;
+}
+
+async function fetchWithRetry(date) {
+  let lastError;
+
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
+    try {
+      console.log(`Fetching PUN data (attempt ${attempt}/${MAX_ATTEMPTS})`);
+      return await fetchAndValidatePun(date);
+    } catch (error) {
+      lastError = error;
+
+      if (attempt === MAX_ATTEMPTS) {
+        break;
+      }
+
+      const delay = RETRY_DELAYS_MS[attempt - 1];
+      console.warn(
+        `Attempt ${attempt} failed: ${error.message}. Retrying in ${delay / 1000}s...`,
+      );
+      await sleep(delay);
+    }
+  }
+
+  throw lastError;
 }
 
 async function main() {
@@ -117,19 +219,26 @@ async function main() {
   }
 
   const date = process.env.PUN_DATE || getTodayDate();
+  const punData = await fetchWithRetry(date);
 
-  const sessionId = await createSession();
-  await login(sessionId);
+  if (!hasChanged(punData)) {
+    console.log(`${OUTPUT_FILE} already contains the latest PUN data`);
+    return;
+  }
 
-  const punData = await fetchPun(date, sessionId);
-
-  fs.writeFileSync('pun.json', JSON.stringify(punData, null, 2));
-
-  console.log('pun.json updated');
-  console.log(JSON.stringify(punData, null, 2));
+  writePunData(punData);
+  console.log(`${OUTPUT_FILE} updated`);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  comparablePunData,
+  hasChanged,
+  validatePunData,
+};
